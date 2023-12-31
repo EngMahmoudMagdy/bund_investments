@@ -1,7 +1,7 @@
+import 'package:bund_investments/core/utils/app_colors.dart';
 import 'package:bund_investments/features/home/presentation/pages/chat_page.dart';
 import 'package:bund_investments/features/home/presentation/pages/home_page.dart';
 import 'package:bund_investments/features/home/presentation/pages/investment_page.dart';
-import 'package:bund_investments/features/investments/presentation/pages/fixed_income_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,7 +16,7 @@ class _MainPageState extends State<MainPage> {
   var _selectedIndex = 0;
   final pages = [
     const HomePage(),
-    const FixedIncomePage(),
+    const InvestmentPage(),
     const ChatPage(),
   ];
 
@@ -30,6 +30,10 @@ class _MainPageState extends State<MainPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
+        selectedIconTheme: const IconThemeData(
+          color: AppColor.primaryColor,
+        ),
+        selectedItemColor: AppColor.primaryColor,
         onTap: _onBottomNavigationClicked,
         items: [
           BottomNavigationBarItem(

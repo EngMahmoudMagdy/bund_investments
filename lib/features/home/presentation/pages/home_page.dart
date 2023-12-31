@@ -1,5 +1,5 @@
-import 'package:bund_investments/core/network/carousel_response.dart';
 import 'package:bund_investments/core/utils/app_colors.dart';
+import 'package:bund_investments/features/home/data/models/carousel_response.dart';
 import 'package:bund_investments/features/home/presentation/widgets/home_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  //This is mock data for Carousel
   final items = [
     const CarouselItem('id', 'First', 'NBE',
         'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*5BdBcKfvLtgPSHjSuGs5KA.png'),
@@ -372,9 +373,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                 ),
                 Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(.2),
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(6),
                     ),
                   ),
@@ -401,9 +402,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                 ),
                 Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(.2),
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(6),
                     ),
                   ),

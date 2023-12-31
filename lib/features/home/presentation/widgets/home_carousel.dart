@@ -1,4 +1,4 @@
-import 'package:bund_investments/core/network/carousel_response.dart';
+import 'package:bund_investments/features/home/data/models/carousel_response.dart';
 import 'package:bund_investments/core/utils/app_colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

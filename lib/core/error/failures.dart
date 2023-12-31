@@ -1,37 +1,26 @@
 import 'package:equatable/equatable.dart';
 
 abstract class Failure extends Equatable {
-  static const List properties = <dynamic>[];
-  // If the subclasses have some properties, they'll get passed to this constructor
-  // so that Equatable can perform value comparison.
-  const Failure([List? properties = properties]);
+  final String? message;
+  const Failure(this.message);
 
   @override
-  List<Object> get props => [properties];
+  List<Object?> get props => [message];
 }
 
 // General failures
 class ServerFailure extends Failure {
-  final List? properties;
-  const ServerFailure([this.properties]) : super(properties);
+  const ServerFailure(super.message);
 }
 
 class AuthFailure extends Failure {
-  final List? properties;
-  const AuthFailure([this.properties]) : super(properties);
+  const AuthFailure(super.message);
 }
 
 class PermissionFailure extends Failure {
-  final List? properties;
-  const PermissionFailure([this.properties]) : super(properties);
-}
-
-class CacheFailure extends Failure {
-  final List? properties;
-  const CacheFailure([this.properties]) : super(properties);
+  const PermissionFailure(super.message);
 }
 
 class ConnectionFailure extends Failure {
-  final List? properties;
-  const ConnectionFailure([this.properties]) : super(properties);
+  const ConnectionFailure(super.message);
 }
